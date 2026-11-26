@@ -1,0 +1,6 @@
+interface:
+  display_name: "PPT Card Layout"
+  short_description: "把内容自动设计成可编辑的科研汇报卡片、表格与时间线"
+  default_prompt: "Use $ppt-card-layout to turn this content into one editable 16:9 research presentation slide."
+policy:
+  allow_implicit_invocation: true
