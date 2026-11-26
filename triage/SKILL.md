@@ -1,9 +1,15 @@
 ---
 name: triage
-description: Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs.
-disable-model-invocation: true
+description: Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if
+  needed, and write agent-ready briefs.
+license: MIT
+metadata:
+  the-thing.legacy.disable-model-invocation: 'true'
+  the-thing.invocation: explicit
+  the-thing.category: plans-progress
+  the-thing.source: https://github.com/mattpocock/skills
 ---
-
+> Invocation: use this workflow when the user explicitly requests it. This is an instruction-level rule; host enforcement is tool-specific.
 # Triage
 
 Move issues on the project issue tracker through a small state machine of triage roles.
@@ -110,3 +116,7 @@ Capture everything resolved during grilling under "established so far" so the wo
 ## Resuming a previous session
 
 If prior triage notes exist on the issue or PR, read them, check whether the reporter has answered any outstanding questions, and present an updated picture before continuing. Don't re-ask resolved questions.
+
+## Host adaptation
+
+`Skill` tool calls in this workflow mean loading the named skill's `SKILL.md` and following it. If the host has no such tool, locate the installed skill directory and read the file directly. A tool name in prose does not grant missing capabilities or permissions; report a missing required capability rather than claiming that step ran.

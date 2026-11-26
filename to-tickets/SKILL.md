@@ -1,9 +1,16 @@
 ---
 name: to-tickets
-description: Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).
-disable-model-invocation: true
+description: Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring
+  its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native
+  blocking links on a real tracker).
+license: MIT
+metadata:
+  the-thing.legacy.disable-model-invocation: 'true'
+  the-thing.invocation: explicit
+  the-thing.category: plans-progress
+  the-thing.source: https://github.com/mattpocock/skills
 ---
-
+> Invocation: use this workflow when the user explicitly requests it. This is an instruction-level rule; host enforcement is tool-specific.
 # To Tickets
 
 Break a plan, spec, or conversation into a set of **tickets**: tracer-bullet vertical slices, each declaring the tickets that **block** it.

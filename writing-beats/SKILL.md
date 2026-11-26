@@ -1,9 +1,15 @@
 ---
 name: writing-beats
-description: Writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat leans on it.
-disable-model-invocation: true
+description: Writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat
+  leans on it.
+license: MIT
+metadata:
+  the-thing.legacy.disable-model-invocation: 'true'
+  the-thing.invocation: explicit
+  the-thing.category: documents-reports
+  the-thing.source: https://github.com/mattpocock/skills
 ---
-
+> Invocation: use this workflow when the user explicitly requests it. This is an instruction-level rule; host enforcement is tool-specific.
 <what-to-do>
 
 The user has passed (or will pass) a markdown file of raw material. This is **exploit**: the exploring is done, the pile is fixed. Commit to a path through it and mine the pile to fill each beat.

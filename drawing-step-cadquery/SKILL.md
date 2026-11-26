@@ -1,6 +1,9 @@
 ---
 name: drawing-step-cadquery
 description: 用 Python 和 CadQuery 从尺寸图或官方 PCB 文件生成 STEP 实体参考模型，适合外壳设计、安装孔定位及 Fusion 导入。
+compatibility: Python with CadQuery; actual dimension drawings or official PCB files required for dimensioned parts.
+metadata:
+  the-thing.category: drawing-modeling
 ---
 # STEP：尺寸图生成实体
 
@@ -14,6 +17,10 @@ description: 用 Python 和 CadQuery 从尺寸图或官方 PCB 文件生成 STEP
 
 注意：PCB 封装主要提供平面数据，不能据此声称元件高度精确；插头空间和焊点间隙需额外考虑。截图未标注的尺寸不能当实测值。
 
-已验证案例：/Users/heting/Documents/ChatGPT/未来不知何去何从的猴子/output/uno_r3_step/build_uno.py
+已验证案例：[本机案例 1](references/local-cases.md#case-1)
 
-补充验证：多零件机械开关可用 `Assembly.add` 分别加入主体、安装螺纹套、垫圈/螺母、摇柄和端子，导出后用 `importers.importStep` 检查多个有效实体与总包围盒；未标注的端子块尺寸、安装耳和螺纹牙形应在 README 中标为估算或简化。案例代码：[9016 开关](/Users/heting/Documents/ChatGPT/手搓但是会点火/output/cad/9016-toggle-switch/build_model.py)。
+补充验证：多零件机械开关可用 `Assembly.add` 分别加入主体、安装螺纹套、垫圈/螺母、摇柄和端子，导出后用 `importers.importStep` 检查多个有效实体与总包围盒；未标注的端子块尺寸、安装耳和螺纹牙形应在 README 中标为估算或简化。案例代码：[9016 开关](references/local-cases.md#case-2)。
+
+## 案例来源的使用范围
+
+本机案例与代码位置见 [local-cases](references/local-cases.md)。案例文件未随技能打包，先查可用性；复用通用方法时使用当前项目输入，不能把旧案例验证等同于本次验证。

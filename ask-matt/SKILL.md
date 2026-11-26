@@ -1,9 +1,14 @@
 ---
 name: ask-matt
 description: Ask which skill or flow fits your situation. A router over the skills in this repo.
-disable-model-invocation: true
+license: MIT
+metadata:
+  the-thing.legacy.disable-model-invocation: 'true'
+  the-thing.invocation: explicit
+  the-thing.category: skills-tooling
+  the-thing.source: https://github.com/mattpocock/skills
 ---
-
+> Invocation: use this workflow when the user explicitly requests it. This is an instruction-level rule; host enforcement is tool-specific.
 # Ask Matt
 
 You don't remember every skill, so ask.

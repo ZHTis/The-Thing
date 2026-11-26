@@ -1,8 +1,11 @@
 ---
 name: neural-data-splits-batches
 description: 设计或审计脑电及语言神经解码数据管线时，管理逐样本元数据、训练验证测试划分和batch组批策略；用于滑窗、跨run或跨被试评估及模型对比。
+compatibility: Access to dataset metadata and split/sampler configuration; data runtime required only for executed
+  checks.
+metadata:
+  the-thing.category: neural-data
 ---
-
 # 样本来源、数据划分与组批
 
 ## 样本来源

@@ -1,8 +1,12 @@
 ---
 name: prototype
-description: Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
+description: Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether
+  a state model or logic feels right, or explore what a UI should look like.
+license: MIT
+metadata:
+  the-thing.category: research-planning
+  the-thing.source: https://github.com/mattpocock/skills
 ---
-
 # Prototype
 
 A prototype is **throwaway code that answers a question**. The question decides the shape.

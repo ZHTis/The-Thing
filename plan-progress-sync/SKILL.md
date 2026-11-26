@@ -1,8 +1,9 @@
 ---
 name: plan-progress-sync
 description: 更新文档、方案、待办或进度记录时，同步检查方案策略、步骤依赖和实际完成度；用于用户要求检查更新、按当前进度整理或核对完成情况。
+metadata:
+  the-thing.category: plans-progress
 ---
-
 # 方案与完成度同步
 
 更新记录时，先确认当前方案，再判定完成度。使用 skill-creator 或 writing-for-agents 修改技能时遵循其指引；本技能只管理记录更新的核验过程。

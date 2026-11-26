@@ -1,0 +1,3 @@
+# Preserved original tool extensions; not automatically consumed by all hosts.
+argument-hint: What will the next session be used for?
+disable-model-invocation: true

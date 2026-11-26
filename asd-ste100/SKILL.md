@@ -1,10 +1,15 @@
 ---
 name: asd-ste100
-description: "Use when English text must be parsed without a human to resolve ambiguity — tool descriptions, error messages, inter-agent instructions, system prompts, status reports — and misreading has a real cost, or when text reads as dense, hedged, or easy to misparse. Triggers: disambiguate, STE100 rewrite, apply Simplified Technical English, plain-language rewrite, controlled-language rewrite, rewrite so an agent cannot misread this. Not for creative or marketing copy."
+description: 'Use when English text must be parsed without a human to resolve ambiguity — tool descriptions, error
+  messages, inter-agent instructions, system prompts, status reports — and misreading has a real cost, or when text
+  reads as dense, hedged, or easy to misparse. Triggers: disambiguate, STE100 rewrite, apply Simplified Technical
+  English, plain-language rewrite, controlled-language rewrite, rewrite so an agent cannot misread this. Not for
+  creative or marketing copy.'
 metadata:
   version: 0.4.0
+  the-thing.category: documents-reports
+license: See LICENSE
 ---
-
 # Simplified Technical English (ASD-STE100)
 
 ASD-STE100 is a controlled-language standard built by the aerospace and defense industry (ASD, the AeroSpace and Defense Industries Association of Europe) to stop maintenance technicians from misreading English instructions. The standard removes the two biggest sources of misreading: words with more than one meaning, and sentences with more than one possible structure.

@@ -1,8 +1,11 @@
 ---
 name: neural-data-model-adapters
 description: 依据原论文和作者工具解释神经解码数据集，生成QC、预处理与模型适配建议；用于Du-IN、VocalMind、SingleWordProductionDutch、NaturalSpeech/ds004703的数据分析问答，以及统一数据包、多模型对比和输入消融。
+compatibility: Access to source papers, dataset documentation and representative project data; actual model/runtime
+  dependencies vary.
+metadata:
+  the-thing.category: neural-data
 ---
-
 # 统一数据与模型适配
 
 本技能规定接口和校验流程，不代表已有可运行的数据处理程序。优先复用项目现有工具；涉及样本来源、划分和组批时读取并遵循[neural-data-splits-batches](../neural-data-splits-batches/SKILL.md)，由该技能管理划分清单。

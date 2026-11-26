@@ -1,8 +1,11 @@
 ---
 name: review-agent
-description: Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.
+description: Perform a read-only, defect-first review of a specified code change and return every actionable finding.
+  Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review
+  instructions.
+metadata:
+  the-thing.category: coding-architecture
 ---
-
 # Review Agent
 
 Inspect the requested target directly and return every finding that the author would likely fix.

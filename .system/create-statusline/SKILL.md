@@ -1,8 +1,11 @@
 ---
 name: create-statusline
-description: Build and enable a custom MCP statusline for the Codex CLI. Use when someone wants a provider that displays information in the terminal footer.
+description: Build and enable a custom MCP statusline for the Codex CLI. Use when someone wants a provider that
+  displays information in the terminal footer.
+compatibility: Codex statusline integration and the Python runtime required by its bundled example.
+metadata:
+  the-thing.category: engineering-setup
 ---
-
 Help the user choose what to show. Reuse an existing stdio MCP server when it already owns the data and is configured globally or supplied by an installed plugin. For a new provider, copy [the Python starter](assets/statusline.py) and edit `render`. The [TypeScript reference](references/statusline.d.ts) bundled with this skill describes the snapshot and UI tree. If those files are on a different machine from your workspace, write the provider in the workspace using the protocol below.
 
 ### Advertise and render the footer

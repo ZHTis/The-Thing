@@ -1,14 +1,28 @@
 # The Thing
 
-完整本地技能仓库，位置为 `~/.codex/skills`。Codex 直接使用此目录，Claude Code 的 `~/.claude/skills` 链接到此目录，因此修改一份即可共享。未配置的工具需确认支持方式后另行链接。
+个人完整技能库，按 [Agent Skills Specification](https://agentskills.io/specification) 整理。每个技能独立目录，分类见 [功能索引](FUNCTIONAL-INDEX.md)，逐项整理记录见 [清单](reports/standardization-inventory.json)。分类本身不是标准要求。
 
-技能分类见 [FUNCTIONAL-INDEX.md](FUNCTIONAL-INDEX.md)。每个技能的规则在其 `SKILL.md` 中。`.system` 是本机随附系统技能快照，可能随 Codex 升级变化；插件缓存中的文档、表格等技能不在此目录，未复制到仓库。
+## 本机共享
 
-## 手动上传
+唯一维护目录为 `~/.codex/skills`，Codex 直接使用；`~/.claude/skills` 是指向它的链接。其他机器克隆完整仓库后，根据目标工具实际的技能发现规则配置目录链接。共享文件不会同步聊天、工具权限、Python 环境或插件。
 
-远程仓库：`https://github.com/ZHTis/The-Thing`（公开）。本次按用户明确指令提交上传，后续仍由用户决定何时提交上传。
+所有绘图技能统一分类，方法和输出格式仍独立，方便准确触发。文档与汇报单列。`.system` 是当前随附系统技能快照；插件缓存中的文档、表格等技能未复制进来。
 
-后续更新时在终端执行：
+## 校验
+
+```sh
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-validation.txt
+.venv/bin/python scripts/validate_skills.py
+# 单项官方校验示例
+.venv/bin/skills-ref validate case-based-planning
+```
+
+skills-ref 是官方的示范参考工具，不是执行质量认证；详细边界见 [兼容性说明](PORTABILITY.md)。
+
+## 手动提交上传
+
+公开仓库：https://github.com/ZHTis/The-Thing 。修改后检查并由用户决定何时提交上传，本任务整理阶段不自动推送。
 
 ```sh
 cd ~/.codex/skills
@@ -18,8 +32,4 @@ git commit -m "更新技能"
 git push
 ```
 
-Git 首次提交若提示缺少身份，在本仓库内配置自己的 `user.name` 和 `user.email`。后续更新手动执行 `git add`、`git commit`、`git push`；没有后台自动上传。
-
-## 使用范围
-
-共享文件不等于共享聊天历史、插件权限或运行环境。技能中仍可能有本机路径或工具专属能力，跨电脑使用需按实际环境核对。保留现有第三方许可、署名及来源，不为整个仓库新增统一许可证；本仓库包含第三方技能及本地修改，各项保留原有许可与署名；仓库不提供统一再授权。
+保留第三方来源和许可，见 [来源](third-party/SOURCES.md)。本仓库不提供统一再授权。历史案例包含本机项目路径，仅用于追溯，不随仓库提供对应项目数据或执行环境。

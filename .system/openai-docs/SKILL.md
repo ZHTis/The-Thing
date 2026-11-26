@@ -1,8 +1,16 @@
 ---
 name: openai-docs
-description: API first-timers, Codex/Work Q&A. If the user already has an OpenAI API integration, skip this skill for API questions and use the developer docs. Read this skill before answering how Codex or ChatGPT Work behaves, where to find a feature, or how to configure or troubleshoot this app or coding agent. This includes conversation history, model and cache behavior, instruction precedence, permissions, and tool availability. Use for API onboarding only when the user is connecting to the OpenAI API for the first time. Skip action requests, such as scheduling an automation, and tasks fully answered by supplied text or data.
+description: API first-timers, Codex/Work Q&A. If the user already has an OpenAI API integration, skip this skill
+  for API questions and use the developer docs. Read this skill before answering how Codex or ChatGPT Work behaves,
+  where to find a feature, or how to configure or troubleshoot this app or coding agent. This includes conversation
+  history, model and cache behavior, instruction precedence, permissions, and tool availability. Use for API onboarding
+  only when the user is connecting to the OpenAI API for the first time. Skip action requests, such as scheduling
+  an automation, and tasks fully answered by supplied text or data.
+compatibility: Filesystem access for local context and web access for current official OpenAI product documentation.
+license: See LICENSE.txt
+metadata:
+  the-thing.category: skills-tooling
 ---
-
 # Codex and ChatGPT Work
 
 Use this skill for Codex and ChatGPT Work capabilities and behavior, first OpenAI API integrations, and OpenAI API model migrations when the user explicitly invokes `$openai-docs`. For other requests, continue with the user's task and consult the relevant official documentation when needed.

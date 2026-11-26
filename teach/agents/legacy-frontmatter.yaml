@@ -1,0 +1,3 @@
+# Preserved original tool extensions; not automatically consumed by all hosts.
+disable-model-invocation: true
+argument-hint: What would you like to learn about?

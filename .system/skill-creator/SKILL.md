@@ -3,8 +3,10 @@ name: skill-creator
 description: Create or update a Codex skill with appropriately scoped instructions and any needed supporting resources.
 metadata:
   short-description: Create or update a skill
+  the-thing.category: skills-tooling
+compatibility: Filesystem access; Python 3 and PyYAML for bundled creation and validation scripts.
+license: See LICENSE.txt
 ---
-
 # Skill Creator
 
 Create skills that give Codex useful, non-obvious guidance without constraining unrelated work.

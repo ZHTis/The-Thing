@@ -1,0 +1,122 @@
+{
+  "research-planning": {
+    "label": "调研与方案",
+    "skills": [
+      "case-based-planning",
+      "research",
+      "grilling",
+      "grill-me",
+      "grill-with-docs",
+      "prototype",
+      "to-questionnaire",
+      "wayfinder"
+    ]
+  },
+  "plans-progress": {
+    "label": "计划与进展",
+    "skills": [
+      "plan-progress-sync",
+      "to-spec",
+      "to-tickets",
+      "triage",
+      "chief-of-staff",
+      "loop-me"
+    ]
+  },
+  "neural-data": {
+    "label": "神经数据",
+    "skills": [
+      "neural-data-model-adapters",
+      "neural-data-splits-batches"
+    ]
+  },
+  "coding-architecture": {
+    "label": "编程与架构",
+    "skills": [
+      "code-review",
+      "codebase-design",
+      "diagnosing-bugs",
+      "domain-modeling",
+      "implement",
+      "implement-spec",
+      "improve-codebase-architecture",
+      "tdd",
+      "software-factory",
+      "review-agent"
+    ]
+  },
+  "engineering-setup": {
+    "label": "工程配置",
+    "skills": [
+      "git-guardrails-claude-code",
+      "migrate-to-shoehorn",
+      "scaffold-exercises",
+      "setup-matt-pocock-skills",
+      "setup-pre-commit",
+      "setup-ts-deep-modules",
+      "wizard",
+      "create-statusline"
+    ]
+  },
+  "drawing-modeling": {
+    "label": "绘图与建模",
+    "skills": [
+      "hatch-pet",
+      "imagegen",
+      "drawing-gif-gesture",
+      "drawing-html-assembly",
+      "drawing-png-cad-preview",
+      "drawing-png-gesture-preview",
+      "drawing-png-print-table",
+      "drawing-png-psychopy-preview",
+      "drawing-png-qt-widget-preview",
+      "drawing-png-reference-composite",
+      "drawing-png-research-overview",
+      "drawing-png-scientific-summary",
+      "drawing-png-task-icon",
+      "drawing-step-cadquery",
+      "drawing-stl-local-smoothing",
+      "drawing-svg-analysis-workflow",
+      "drawing-svg-cognitive-map",
+      "drawing-svg-workflow-diagram",
+      "drawing-xlsx-spatial-preview",
+      "drawing-technique-tracker"
+    ]
+  },
+  "documents-reports": {
+    "label": "文档与汇报",
+    "skills": [
+      "asd-ste100",
+      "ppt-card-layout",
+      "pr",
+      "writing-beats",
+      "writing-fragments",
+      "writing-shape"
+    ]
+  },
+  "handoff-retrospective": {
+    "label": "交接与复盘",
+    "skills": [
+      "handoff",
+      "claude-handoff",
+      "retro",
+      "wait-what"
+    ]
+  },
+  "skills-tooling": {
+    "label": "技能与工具管理",
+    "skills": [
+      "ask-matt",
+      "writing-for-agents",
+      "skill-creator",
+      "skill-installer",
+      "openai-docs"
+    ]
+  },
+  "learning": {
+    "label": "学习与教学",
+    "skills": [
+      "teach"
+    ]
+  }
+}

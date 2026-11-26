@@ -1,8 +1,13 @@
 ---
 name: ppt-card-layout
-description: Design one polished 16:9 presentation slide from supplied content using editable native tables, cards, timelines, and comparison layouts. Use for metric cards, research questions, project status, comparisons, timelines, risks, next steps, or a concise one-page PPT summary. Avoid for multi-slide narrative decks or inline HTML visualizations.
+description: Design one polished 16:9 presentation slide from supplied content using editable native tables, cards,
+  timelines, and comparison layouts. Use for metric cards, research questions, project status, comparisons, timelines,
+  risks, next steps, or a concise one-page PPT summary. Avoid for multi-slide narrative decks or inline HTML visualizations.
+compatibility: A presentation-authoring runtime producing editable objects and rendered previews; a compatible Presentations
+  workflow is required.
+metadata:
+  the-thing.category: documents-reports
 ---
-
 # PPT Card Layout
 
 Turn supplied content into one clear 16:9 presentation slide. Use the `Presentations` workflow for the deliverable. Apply `visualize` composition principles to choose the smallest useful structure; do not create a separate HTML visualization unless the user requests one.
@@ -43,4 +48,3 @@ Turn supplied content into one clear 16:9 presentation slide. Use the `Presentat
 - Keep all requested tables, cards, timelines, and diagrams editable.
 - Cite external facts and images in speaker notes when required by the presentation workflow.
 - Return the saved presentation, not screenshots of the slide.
-

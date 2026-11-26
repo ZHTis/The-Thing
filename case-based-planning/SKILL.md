@@ -1,8 +1,9 @@
 ---
 name: case-based-planning
 description: 为用户出方案、做方案调研或比较实施路线时，先检索公开案例，区分直接复用、参考借鉴与个性化开发，并对实践方案做简要可行性分析。
+metadata:
+  the-thing.category: research-planning
 ---
-
 # 基于公开案例出方案
 
 这是用户对今后方案工作的默认偏好。用户明确限定不联网或只依据给定材料时，遵循该限制并说明证据范围。

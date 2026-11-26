@@ -1,6 +1,8 @@
 ---
 name: drawing-technique-tracker
 description: 在生成或修改图纸、模型、图片、图表或动画后，按实际输出格式维护用户的简短绘图技能；用于持续积累已经验证的技巧。
+metadata:
+  the-thing.category: drawing-modeling
 ---
 # 绘图技巧跟踪
 

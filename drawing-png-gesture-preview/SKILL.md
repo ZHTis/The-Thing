@@ -1,8 +1,10 @@
 ---
 name: drawing-png-gesture-preview
 description: 用参考手势图生成统一风格的透明或白底 PNG 手势候选图，供 PsychoPy cue 审核。
+compatibility: Image-generation capability with reference images; macOS sips only for the documented crop example.
+metadata:
+  the-thing.category: drawing-modeling
 ---
-
 # 手势 PNG 预览
 
 用途：为 PsychoPy 的手势 cue 生成候选预览，不直接替换已验证的实验素材。
@@ -21,4 +23,8 @@ description: 用参考手势图生成统一风格的透明或白底 PNG 手势�
 
 用途：将透明手势 PNG 做成可直接插入幻灯片的素材总览，不改动源图。用 Swift AppKit 绘制 16:9 画布、等宽卡片与标题；手势图等比缩放居中，标注名称，并用不同颜色区分现有素材与候选预览。底部注明候选状态，避免误作已启用任务条件。
 
-检查：目视确认所有图像完整、卡片及标签无裁切；候选状态与素材说明一致。已验证 1920×1080 输出案例：`/Users/heting/Documents/summaries/手势库总览_PPT.png`（2026-11-06）。
+检查：目视确认所有图像完整、卡片及标签无裁切；候选状态与素材说明一致。已验证 1920×1080 输出案例：[本机案例 1](references/local-cases.md#case-1)（2026-11-06）。
+
+## 案例来源的使用范围
+
+本机案例与代码位置见 [local-cases](references/local-cases.md)。案例文件未随技能打包，先查可用性；复用通用方法时使用当前项目输入，不能把旧案例验证等同于本次验证。

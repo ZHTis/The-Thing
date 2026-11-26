@@ -1,0 +1,2 @@
+# Preserved original tool extensions; not automatically consumed by all hosts.
+disable-model-invocation: true

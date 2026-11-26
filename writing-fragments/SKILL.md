@@ -1,9 +1,14 @@
 ---
 name: writing-fragments
-description: "Writing, explore: mine raw fragments, no structure yet."
-disable-model-invocation: true
+description: 'Writing, explore: mine raw fragments, no structure yet.'
+license: MIT
+metadata:
+  the-thing.legacy.disable-model-invocation: 'true'
+  the-thing.invocation: explicit
+  the-thing.category: documents-reports
+  the-thing.source: https://github.com/mattpocock/skills
 ---
-
+> Invocation: use this workflow when the user explicitly requests it. This is an instruction-level rule; host enforcement is tool-specific.
 <what-to-do>
 
 This is pure **explore**: widen the space of what could be written without committing to structure. Committing is _exploit_, a separate skill's job. Run a grilling session that produces fragments, interviewing the user relentlessly about whatever they want to write about. Imposing phases, outlines, or article structure is out of scope here.

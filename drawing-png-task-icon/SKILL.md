@@ -1,8 +1,10 @@
 ---
 name: drawing-png-task-icon
 description: 为本地 PsychoPy 任务制作可直接载入的默认图标。
+compatibility: PNG image generation, or SVG-to-PNG renderer; macOS sips is one option; PsychoPy for load verification.
+metadata:
+  the-thing.category: drawing-modeling
 ---
-
 # PsychoPy 默认 PNG 图标
 
 用途：为刺激任务提供一个浏览器可预览、PsychoPy `ImageStim` 可加载的本地图标。

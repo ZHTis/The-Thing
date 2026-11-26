@@ -1,0 +1,737 @@
+{
+  "specification": "https://agentskills.io/specification",
+  "validator": "skills-ref 0.1.0",
+  "validator_source_commit": "83021e2be457a9b6679148719c1f6074f0ad975e",
+  "skills": [
+    {
+      "path": "asd-ste100",
+      "name": "asd-ste100",
+      "category": "documents-reports",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "ask-matt",
+      "name": "ask-matt",
+      "category": "skills-tooling",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "case-based-planning",
+      "name": "case-based-planning",
+      "category": "research-planning",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "chief-of-staff",
+      "name": "chief-of-staff",
+      "category": "plans-progress",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "claude-handoff",
+      "name": "claude-handoff",
+      "category": "handoff-retrospective",
+      "legacy_fields": [
+        "argument-hint",
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: argument-hint, disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "code-review",
+      "name": "code-review",
+      "category": "coding-architecture",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "codebase-design",
+      "name": "codebase-design",
+      "category": "coding-architecture",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "diagnosing-bugs",
+      "name": "diagnosing-bugs",
+      "category": "coding-architecture",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "domain-modeling",
+      "name": "domain-modeling",
+      "category": "coding-architecture",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-gif-gesture",
+      "name": "drawing-gif-gesture",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 2,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-html-assembly",
+      "name": "drawing-html-assembly",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 1,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-png-cad-preview",
+      "name": "drawing-png-cad-preview",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 2,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-png-gesture-preview",
+      "name": "drawing-png-gesture-preview",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 1,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-png-print-table",
+      "name": "drawing-png-print-table",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 2,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-png-psychopy-preview",
+      "name": "drawing-png-psychopy-preview",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 2,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-png-qt-widget-preview",
+      "name": "drawing-png-qt-widget-preview",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 1,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-png-reference-composite",
+      "name": "drawing-png-reference-composite",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 1,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-png-research-overview",
+      "name": "drawing-png-research-overview",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 2,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-png-scientific-summary",
+      "name": "drawing-png-scientific-summary",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 8,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-png-task-icon",
+      "name": "drawing-png-task-icon",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-step-cadquery",
+      "name": "drawing-step-cadquery",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 2,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-stl-local-smoothing",
+      "name": "drawing-stl-local-smoothing",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 1,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-svg-analysis-workflow",
+      "name": "drawing-svg-analysis-workflow",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 1,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-svg-cognitive-map",
+      "name": "drawing-svg-cognitive-map",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 1,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-svg-workflow-diagram",
+      "name": "drawing-svg-workflow-diagram",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 7,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-technique-tracker",
+      "name": "drawing-technique-tracker",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "drawing-xlsx-spatial-preview",
+      "name": "drawing-xlsx-spatial-preview",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 1,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "git-guardrails-claude-code",
+      "name": "git-guardrails-claude-code",
+      "category": "engineering-setup",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "grill-me",
+      "name": "grill-me",
+      "category": "research-planning",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "grill-with-docs",
+      "name": "grill-with-docs",
+      "category": "research-planning",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "grilling",
+      "name": "grilling",
+      "category": "research-planning",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "handoff",
+      "name": "handoff",
+      "category": "handoff-retrospective",
+      "legacy_fields": [
+        "argument-hint",
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: argument-hint, disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "hatch-pet",
+      "name": "hatch-pet",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "implement",
+      "name": "implement",
+      "category": "coding-architecture",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "implement-spec",
+      "name": "implement-spec",
+      "category": "coding-architecture",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "improve-codebase-architecture",
+      "name": "improve-codebase-architecture",
+      "category": "coding-architecture",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "loop-me",
+      "name": "loop-me",
+      "category": "plans-progress",
+      "legacy_fields": [
+        "disable-model-invocation",
+        "argument-hint"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: argument-hint, disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "migrate-to-shoehorn",
+      "name": "migrate-to-shoehorn",
+      "category": "engineering-setup",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "neural-data-model-adapters",
+      "name": "neural-data-model-adapters",
+      "category": "neural-data",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "neural-data-splits-batches",
+      "name": "neural-data-splits-batches",
+      "category": "neural-data",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "plan-progress-sync",
+      "name": "plan-progress-sync",
+      "category": "plans-progress",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "ppt-card-layout",
+      "name": "ppt-card-layout",
+      "category": "documents-reports",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "pr",
+      "name": "pr",
+      "category": "documents-reports",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "prototype",
+      "name": "prototype",
+      "category": "research-planning",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "research",
+      "name": "research",
+      "category": "research-planning",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "retro",
+      "name": "retro",
+      "category": "handoff-retrospective",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "scaffold-exercises",
+      "name": "scaffold-exercises",
+      "category": "engineering-setup",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "setup-matt-pocock-skills",
+      "name": "setup-matt-pocock-skills",
+      "category": "engineering-setup",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "setup-pre-commit",
+      "name": "setup-pre-commit",
+      "category": "engineering-setup",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "setup-ts-deep-modules",
+      "name": "setup-ts-deep-modules",
+      "category": "engineering-setup",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "software-factory",
+      "name": "software-factory",
+      "category": "coding-architecture",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Invalid YAML in frontmatter: mapping values are not allowed here\n  in \"<unicode string>\", line 3, column 62:\n     ... for designing a software factory: the tasks it runs and the serv ... \n                                         ^ (line: 3)"
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "tdd",
+      "name": "tdd",
+      "category": "coding-architecture",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "teach",
+      "name": "teach",
+      "category": "learning",
+      "legacy_fields": [
+        "disable-model-invocation",
+        "argument-hint"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: argument-hint, disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "to-questionnaire",
+      "name": "to-questionnaire",
+      "category": "research-planning",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "to-spec",
+      "name": "to-spec",
+      "category": "plans-progress",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "to-tickets",
+      "name": "to-tickets",
+      "category": "plans-progress",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "triage",
+      "name": "triage",
+      "category": "plans-progress",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "wait-what",
+      "name": "wait-what",
+      "category": "handoff-retrospective",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "wayfinder",
+      "name": "wayfinder",
+      "category": "research-planning",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "wizard",
+      "name": "wizard",
+      "category": "engineering-setup",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "writing-beats",
+      "name": "writing-beats",
+      "category": "documents-reports",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "writing-for-agents",
+      "name": "writing-for-agents",
+      "category": "skills-tooling",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": "writing-fragments",
+      "name": "writing-fragments",
+      "category": "documents-reports",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": "writing-shape",
+      "name": "writing-shape",
+      "category": "documents-reports",
+      "legacy_fields": [
+        "disable-model-invocation"
+      ],
+      "local_case_count": 0,
+      "official_errors_before": [
+        "Unexpected fields in frontmatter: disable-model-invocation. Only ['allowed-tools', 'compatibility', 'description', 'license', 'metadata', 'name'] are allowed."
+      ],
+      "official_errors_after": []
+    },
+    {
+      "path": ".system/create-statusline",
+      "name": "create-statusline",
+      "category": "engineering-setup",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": ".system/imagegen",
+      "name": "imagegen",
+      "category": "drawing-modeling",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": ".system/openai-docs",
+      "name": "openai-docs",
+      "category": "skills-tooling",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": ".system/review-agent",
+      "name": "review-agent",
+      "category": "coding-architecture",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": ".system/skill-creator",
+      "name": "skill-creator",
+      "category": "skills-tooling",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    },
+    {
+      "path": ".system/skill-installer",
+      "name": "skill-installer",
+      "category": "skills-tooling",
+      "legacy_fields": [],
+      "local_case_count": 0,
+      "official_errors_before": [],
+      "official_errors_after": []
+    }
+  ]
+}
