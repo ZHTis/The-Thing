@@ -1,7 +1,7 @@
 ---
 name: research
-description: Investigate a question against high-trust primary sources and capture the findings as a Markdown file
-  in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated
+description: Investigate a question against high-trust primary sources and update the existing related Markdown note
+  in place; ask before creating a separate note for a new topic branch. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated
   to a background agent.
 compatibility: Primary-source access; background subagent support when research is delegated.
 license: MIT
@@ -9,15 +9,18 @@ metadata:
   the-thing.category: research-planning
   the-thing.source: https://github.com/mattpocock/skills
 ---
-Spin up a **background agent** to do the research, so you keep working while it reads. Start it with a fresh context window.
+# Research
 
-Its job:
+Investigate the question against primary sources: official documentation, source code, specifications, papers or first-party APIs. Follow claims to the source that owns them, record versions/dates where relevant, and distinguish facts, estimates and unverified items. Delegated background research uses a fresh-context agent; the same evidence and note policy applies to its output.
 
-1. Investigate the question against **primary sources** (official docs, source code, specs, first-party APIs), not a secondary write-up of them. Follow every claim back to the source that owns it.
-2. Write the findings to a single Markdown file, citing each claim's source.
-3. Save it where the repo already keeps such notes; match the existing convention, and if there is none, put it somewhere sensible and say where.
+## Default note policy
 
+Update Markdown by default, using the existing related note in place. First inspect the project's established note location and the current topic. Preserve useful earlier findings, source links and unresolved questions; reconcile corrections in the relevant section instead of appending duplicate notes. Historical archives remain immutable under the user's archive rules.
 
-## 与方案入口的分工
+When the topic branches enough to merit a separate note, ask whether to create that note before creating it. Offer a title/location and briefly state why it is a separate branch; continue independent research while waiting, keeping the new branch findings in the response rather than writing an unrelated note. If there is no suitable existing note, ask which existing note to use or whether to create the first one. An explicit instruction to create a named note already authorizes that creation and needs no repeated confirmation.
 
-独立调研使用本技能；调研要形成实施方案时，再读取相邻 `../case-based-planning/SKILL.md`，复用已查证资料并完成直接复用、参考、定制和可行性判断。只在用户需要可保存的调研交付时写入文件，并遵循其指定格式与位置。
+Report the note actually updated and any pending file-creation choice. Do not create a temporary, alternate or worker-owned Markdown note to bypass the user's choice. Research agents should return findings to the parent when the approved destination is unavailable.
+
+## Relation to planning
+
+Use this skill for independent investigation. When findings must become an implementation plan, read `../case-based-planning/SKILL.md` and reuse the verified evidence, then distinguish direct reuse, references, customization and feasibility. Do not make this handoff a reason to create another note; apply the same in-place note policy.

@@ -3,7 +3,7 @@
 1. Prepare a pet run folder and imagegen job manifest:
 
 ```bash
-SKILL_DIR="${CODEX_HOME:-$HOME/.codex}/skills/hatch-pet"
+SKILL_DIR="/path/to/work-pets-support/compat/codex" # resolve the actual installed compatibility directory
 "$PYTHON" "$SKILL_DIR/scripts/prepare_pet_run.py" \
   --pet-name "<Name>" \
   --description "<one sentence>" \

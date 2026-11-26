@@ -55,13 +55,14 @@
       "setup-pre-commit",
       "setup-ts-deep-modules",
       "wizard",
-      "create-statusline"
+      "create-statusline",
+      "workstation-ssh-workflow"
     ]
   },
   "drawing-modeling": {
     "label": "绘图与建模",
     "skills": [
-      "hatch-pet",
+      "work-pets-support",
       "imagegen",
       "drawing-gif-gesture",
       "drawing-html-assembly",

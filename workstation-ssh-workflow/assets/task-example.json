@@ -1,0 +1,27 @@
+{
+  "task_id": "host-inspection-001",
+  "execution_mode": "foreground",
+  "target": {
+    "ssh_target": "user@workstation.example",
+    "expected_hostname": "WINDOWS-HOST",
+    "identity_file": "~/.ssh/workstation_key",
+    "powershell": "powershell",
+    "port": 22
+  },
+  "context": {
+    "repository": {"status": "not_applicable", "reason": "This example inspects the host only"},
+    "environment": {"status": "unverified", "reason": "No environment installation or training is authorized"},
+    "data": {"status": "not_applicable", "reason": "This example does not access project data"}
+  },
+  "authorization": {"scope": "Replace with the actual user authorization for read-only host inspection"},
+  "timeout_seconds": 30,
+  "log_file": "~/workstation-runs/host-inspection-001.jsonl",
+  "steps": [
+    {
+      "id": "host-version",
+      "purpose": "Confirm the destination hostname and PowerShell version without modifying the machine",
+      "script": "Write-Output ('HOST=' + $env:COMPUTERNAME)\nWrite-Output ('PS_VERSION=' + $PSVersionTable.PSVersion.ToString())",
+      "expect": ["^HOST=WINDOWS-HOST\\r?$", "^PS_VERSION=\\d+\\."]
+    }
+  ]
+}

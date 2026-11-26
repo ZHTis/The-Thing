@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work Pets 补充与 Codex 兼容"
+  short_description: "官方宠物流程的QA补充和独立Codex兼容分支，分别检查格式与实际结果"
+  default_prompt: "使用 $work-pets-support，按目标应用选择官方 Work 流程的补充检查或独立 Codex 兼容分支。"

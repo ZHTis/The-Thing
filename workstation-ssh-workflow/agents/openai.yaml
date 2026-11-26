@@ -1,0 +1,4 @@
+interface:
+  display_name: "工作站 SSH 交接与审计"
+  short_description: "把方案交接到 Windows 工作站，逐条返回命令、实际输出、退出码和验收证据"
+  default_prompt: "使用 $workstation-ssh-workflow 整理当前方案的工作站执行清单，并按现有授权逐条执行、返回 SSH 日志和验收结果。"

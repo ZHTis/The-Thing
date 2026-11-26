@@ -1,16 +1,6 @@
----
-name: hatch-pet
-description: Create, repair, validate, visually QA, and package Codex-compatible v2 animated pets from character
-  art, generated images, company or prospect brand cues, or visual references. Use for any new Codex pet, custom
-  mascot, non-pixel pet style, brand-inspired pet, existing-pet repair, or 8x11 spritesheet workflow requiring all
-  9 standard animation rows, 16 look directions, deterministic assembly, QA artifacts, and spriteVersionNumber 2
-  packaging.
-compatibility: Codex-compatible v2 pet runtime, image generation, isolated visual workers, workspace dependency
-  loader and bundled Python/Pillow tooling.
-license: See LICENSE.txt
-metadata:
-  the-thing.category: drawing-modeling
----
+# Archived Codex compatibility workflow
+
+Historical local implementation retained at the user's request. It is not the ChatGPT Work contract and has not been revalidated in the current Codex app. Resolve script paths from this compatibility directory; do not upload its sheet through Work Pets without using the Work Pets contract.
 
 # Hatch Pet
 

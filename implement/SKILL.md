@@ -19,7 +19,9 @@ Run typechecking regularly, single test files regularly, and the full test suite
 
 Once done, call the Skill tool with "code-review" to review the work.
 
-Commit your work to the current branch.
+After the relevant checks and review pass, automatically commit only the changes for the actual implement task. Inspect the branch and diff first; preserve unrelated staged and unstaged changes. Invoking implement authorizes this local commit under the user's standing preference, but not a push, merge of unrelated work or issue publication. If checks fail or the result is incomplete, report the gap instead of creating a misleading completion commit.
+
+This exception applies when the user actually activates the implement workflow. Merely mentioning implement while discussing skill preferences, or invoking another skill such as implement-spec, is not that activation. Outside an actual implement workflow, the user decides whether to commit. Push still requires separate explicit authorization.
 
 ## Host adaptation
 

@@ -1,6 +1,7 @@
 ---
 name: implement-spec
-description: Implement the result of /to-spec and /to-tickets in code.
+description: Execute an explicitly requested specification task graph with verification; planning alone does not
+  activate execution, and commits, tracker publication and PR changes follow their separate authorization.
 compatibility: Git, worktrees, subagents and the project's configured issue tracker; unavailable capabilities must
   be reported.
 license: MIT
@@ -10,44 +11,27 @@ metadata:
   the-thing.category: coding-architecture
   the-thing.source: https://github.com/mattpocock/skills
 ---
-> Invocation: use this workflow when the user explicitly requests it. This is an instruction-level rule; host enforcement is tool-specific.
-You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.
+# Implement Spec
 
-The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
+Use this workflow only when the user actually requests implementing the specification. A plan, a spec draft or an approved technical design does not start execution. If the current request is planning only, return that draft and the proposed next step without creating branches, launching implementers or posting issues.
 
-The goal is the entire spec implemented on a single **integration branch**, with every ticket resolved the way the issue tracker closes work.
+## Execution and publication boundaries
 
-The tickets are not a list of steps. They are a **task graph** with blocking relationships between them. This means there is always a **frontier** of tickets which are ready to be grabbed.
+Read the spec, task graph and existing authorization. Implementation, local commits, external tracker changes, PR creation, push and merge-to-main are distinct scopes. This skill is implement-spec, not implement: it does not inherit the user's implement-only automatic-commit exception. If a particular task is explicitly run through implement, apply its scoped local-commit rule to that task only. Do not manufacture that activation to bypass a commit restriction or an approval rejection.
 
-Start every subagent with a fresh context window.
+Tracker configuration is optional for local execution from an existing task list. Use the actual available tools; report missing required capabilities. Preserve the user's current worktree contents and inspect branch bases; never reset an existing worktree to force the expected base.
 
-Communication to and from subagents should be sparse. Communicate primarily through **context pointers**: to the spec, tickets, research notes, and previous commits. Don't duplicate information already available via pointers.
+## Work the task graph
 
-**Implementer subagents** should be run in the background where possible for maximum concurrency.
-
-## Steps
-
-1. Read the spec and tickets to understand the task graph.
-
-2. (optional) Use an **exploration subagent** to conduct any exploration required by the tickets - relevant codebase files or external documentation. Ensure the exploration subagent can save files - it should save its markdown notes in a directory outside the repo, accessible by all future subagents. This lets **implementer subagents** focus on implementation rather than exploration.
-
-3. Create the integration branch. If the issue tracker closes work through PRs, or the user asks for one, open a draft PR after the first merge in step 5 (a branch with no commits ahead of main can't open one), marked as closing the spec and tickets.
-
-4. Use a fresh **implementer subagent** for each ticket, each in its own worktree on its own branch. Each implementer subagent:
-   - confirms its worktree is based on the integration branch before starting, and resets onto it if not;
-   - calls the Skill tool with `tdd` to build the ticket;
-   - merges the integration branch tip into its own branch before reporting done
-
-5. Once an **implementer subagent** completes, merge its work to the integration branch with a **merger subagent**.
-
-6. If this changes the **frontier** of available tickets, kick off more **implementer subagents** to work on the new tickets. This allows for maximum concurrency.
-
-7. Once all tickets are complete, call the Skill tool with `code-review` on the integration branch. Fix all issues raised by the code review in a single fresh **implementer subagent**.
-
-8. If a draft PR exists, mark it ready for review. Otherwise, resolve each ticket the way the issue tracker closes work, and report the integration branch.
-
-9. Clean up all **implementer subagent** worktrees.
+1. Read the complete spec and ticket dependencies, confirming acceptance criteria and scope from existing artifacts. Work only tickets whose prerequisites are satisfied.
+2. Reuse a suitable checkout. For a large task that needs isolation, use suitable worktrees and an integration branch. Read required project facts directly or use an exploration agent when useful; preserve a pointer to findings rather than duplicating them across agents.
+3. For independent ready tickets, use fresh-context implementer agents when the host supports them. Each produces scoped changes and test evidence. Use tdd where appropriate and preserve unrelated work. Without commit authorization, return/apply reviewed patches rather than creating commits just to enable branch merging.
+4. Integrate each verified result in the authorized local workspace, resolving conflicting changes and rerunning relevant checks. Merge committed ticket branches only when their commits and the local integration operation are authorized; otherwise retain reviewable patches/files and identify the remaining commit step.
+5. Recompute the ready frontier and continue until requested implementation is complete or an actual dependency blocks progress. Do not silently change feature scope to remove a blocker.
+6. Review the full implementation with code-review and fix actionable findings, then report implementation, tests, outstanding issues and the branch or file locations. Distinguish completed code from unrun tests or unverified runtime behavior.
+7. Perform external publication only when explicitly authorized for the specified destination: creating/pushing a PR, marking it ready, changing issue status or closing tickets are separate from producing local code. Approval of a draft or a test result alone is not publication authorization. Honor already-provided scoped authorization without asking again.
+8. Clean up only task-owned worktrees no longer needed, preserving review artifacts and any uncommitted user work.
 
 ## Host adaptation
 
-`Skill` tool calls in this workflow mean loading the named skill's `SKILL.md` and following it. If the host has no such tool, locate the installed skill directory and read the file directly. A tool name in prose does not grant missing capabilities or permissions; report a missing required capability rather than claiming that step ran.
+A Skill-tool call means loading the named skill's SKILL.md and following it; read the file directly if that tool is unavailable. Delegation and worktree capabilities remain actual requirements, not claims that text can substitute for tools. Small tasks may be implemented directly when parallel orchestration adds no benefit.

@@ -10,7 +10,7 @@ metadata:
 ---
 # Scaffold Exercises
 
-Create exercise directory structures that pass `pnpm ai-hero-cli internal lint`, then commit with `git commit`.
+Create exercise directory structures that pass `pnpm ai-hero-cli internal lint`. Report the verified changes; the user decides whether to commit unless the actual task is being executed through implement. Do not automatically commit or push from this skill alone.
 
 ## Directory naming
 

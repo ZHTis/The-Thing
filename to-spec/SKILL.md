@@ -1,7 +1,7 @@
 ---
 name: to-spec
-description: 'Turn the current conversation into a spec and publish it to the project issue tracker: no interview,
-  just synthesis of what you''ve already discussed.'
+description: Draft a specification from the existing discussion when the user requests one; publish to an issue
+  tracker only under explicit publication authorization.
 license: MIT
 metadata:
   the-thing.legacy.disable-model-invocation: 'true'
@@ -10,9 +10,11 @@ metadata:
   the-thing.source: https://github.com/mattpocock/skills
 ---
 > Invocation: use this workflow when the user explicitly requests it. This is an instruction-level rule; host enforcement is tool-specific.
-This skill takes the current conversation context and codebase understanding and produces a spec. Do NOT interview the user; just synthesize what you already know.
+This skill synthesizes an existing discussion into a specification draft. A request for a plan alone stays in case-based-planning; it does not activate specification, ticketing or implementation phases.
 
-The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
+Drafting, saving a local document, publishing to a tracker and executing code are distinct scopes. Default to the draft and stop there. Explicit authorization to publish a specification permits publishing that approved content to the specified destination; it does not authorize code implementation, PR creation or release. Honor existing scoped authorization without requesting it again.
+
+Draft from the available context even without a configured tracker. Tracker and label setup is needed only when publication is actually requested; then use the established configuration or resolve the missing destination.
 
 ## Process
 
@@ -20,9 +22,11 @@ The issue tracker and triage label vocabulary should have been provided to you. 
 
 2. Sketch out the seams at which you're going to test the feature. Existing seams should be preferred to new ones. Use the highest seam possible. If new seams are needed, propose them at the highest point you can. The fewer seams across the codebase, the better - the ideal number is one.
 
-Check with the user that these seams match their expectations.
+Include proposed seams and unresolved decisions in the draft. Ask a focused question only when its answer materially changes the specification; do not require approval just to produce a reviewable draft.
 
-3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
+3. Write the draft using the template below. Use an existing approved document location or present it in the response; writing a new local artifact follows the user's requested destination. Do not advance to to-tickets or implement-spec unless that phase is requested.
+
+4. Only when publishing is explicitly authorized, publish the reviewed scope to the configured tracker and apply the established labels. Approval of wording or technical decisions alone is not authorization to publish. If publication was already explicitly requested, complete that authorized action without asking for a second identical approval.
 
 <spec-template>
 
@@ -36,7 +40,7 @@ The solution to the problem, from the user's perspective.
 
 ## User Stories
 
-A LONG, numbered list of user stories. Each user story should be in the format of:
+A numbered list of user stories covering the requested scope. Each user story should be in the format of:
 
 1. As an <actor>, I want a <feature>, so that <benefit>
 
@@ -44,7 +48,7 @@ A LONG, numbered list of user stories. Each user story should be in the format o
 1. As a mobile bank customer, I want to see balance on my accounts, so that I can make better informed decisions about my spending
 </user-story-example>
 
-This list of user stories should be extremely extensive and cover all aspects of the feature.
+Cover necessary user-visible behavior and relevant edge cases without expanding the feature or imposing a length quota.
 
 ## Implementation Decisions
 

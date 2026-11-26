@@ -4,7 +4,7 @@ description: Create or update a Codex skill with appropriately scoped instructio
 metadata:
   short-description: Create or update a skill
   the-thing.category: skills-tooling
-compatibility: Filesystem access; Python 3 and PyYAML for bundled creation and validation scripts.
+compatibility: Filesystem access; Python 3, PyYAML and skills-ref for bundled creation and validation scripts; install requirements-validation.txt in a dedicated validation environment.
 license: See LICENSE.txt
 ---
 # Skill Creator

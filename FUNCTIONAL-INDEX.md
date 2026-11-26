@@ -40,7 +40,7 @@
 - [software-factory](software-factory/SKILL.md)
 - [tdd](tdd/SKILL.md)
 
-## 工程配置（8）
+## 工程配置（9）
 
 - [create-statusline](.system/create-statusline/SKILL.md)（系统随附）
 - [git-guardrails-claude-code](git-guardrails-claude-code/SKILL.md)
@@ -50,6 +50,7 @@
 - [setup-pre-commit](setup-pre-commit/SKILL.md)
 - [setup-ts-deep-modules](setup-ts-deep-modules/SKILL.md)
 - [wizard](wizard/SKILL.md)
+- [workstation-ssh-workflow](workstation-ssh-workflow/SKILL.md)
 
 ## 绘图与建模（20）
 
@@ -71,8 +72,8 @@
 - [drawing-svg-workflow-diagram](drawing-svg-workflow-diagram/SKILL.md)
 - [drawing-technique-tracker](drawing-technique-tracker/SKILL.md)
 - [drawing-xlsx-spatial-preview](drawing-xlsx-spatial-preview/SKILL.md)
-- [hatch-pet](hatch-pet/SKILL.md)
 - [imagegen](.system/imagegen/SKILL.md)（系统随附）
+- [work-pets-support](work-pets-support/SKILL.md)（官方流程补充与独立Codex兼容）
 
 ## 文档与汇报（6）
 

@@ -31,37 +31,53 @@ def without_fenced_code(text):
 
 def check(root):
     taxonomy = json.loads((root / "taxonomy.json").read_text())
+    names = [name for group in taxonomy.values() for name in group["skills"]]
+    if len(names) != len(set(names)):
+        raise ValueError("[CAT001] Duplicate skill in taxonomy.json; list each skill once")
     classified = {name: key for key, group in taxonomy.items() for name in group["skills"]}
     paths = sorted(root.glob("*/SKILL.md")) + sorted((root / ".system").glob("*/SKILL.md"))
     results = []
     for entry in paths:
         errors = list(validate(entry.parent))
         text = entry.read_text()
-        data = yaml.safe_load(text.split("---", 2)[1])
+        try:
+            data = yaml.safe_load(text.split("---", 2)[1])
+            if not isinstance(data, dict):
+                raise ValueError("frontmatter must be a mapping")
+        except (yaml.YAMLError, IndexError, ValueError) as exc:
+            results.append({"name": entry.parent.name, "path": str(entry.parent.relative_to(root)),
+                            "errors": errors + ["[SPEC001] Repair YAML frontmatter: " + str(exc)]})
+            continue
         name = data.get("name")
         metadata = data.get("metadata", {})
         if not isinstance(metadata, dict) or not all(isinstance(k, str) and isinstance(v, str) for k, v in metadata.items()):
-            errors.append("metadata must map strings to strings")
+            errors.append("[META001] metadata must map strings to strings; quote each value")
+            metadata = {}
         if metadata.get("the-thing.category") != classified.get(name):
-            errors.append("category does not match taxonomy.json")
+            errors.append("[CAT001] category does not match taxonomy.json; update metadata, taxonomy and index together")
         if len(text.splitlines()) >= 500:
-            errors.append("entrypoint exceeds repository limit of 499 lines")
+            errors.append("[SIZE001] entrypoint exceeds repository limit of 499 lines; move details to references")
         if "/Users/" in text:
-            errors.append("host-specific user path in entrypoint; move historical cases into references")
+            errors.append("[PATH001] host-specific user path in entrypoint; move historical cases into references")
         if metadata.get("the-thing.invocation") == "explicit":
             policy_path = entry.parent / "agents/openai.yaml"
-            config = yaml.safe_load(policy_path.read_text()) if policy_path.exists() else {}
+            try:
+                config = yaml.safe_load(policy_path.read_text()) if policy_path.exists() else {}
+                if not isinstance(config, dict):
+                    config = {}
+            except yaml.YAMLError:
+                config = {}
             if config.get("policy", {}).get("allow_implicit_invocation") is not False:
-                errors.append("explicit-only Codex host policy missing")
+                errors.append("[HOST001] explicit-only Codex host policy missing; set policy.allow_implicit_invocation to false")
         for link in re.findall(r"\]\(([^)]+)\)", without_fenced_code(text)):
             if link.startswith(("https://", "http://", "#", "/", "mailto:", "<")):
                 continue
             target = link.split("#", 1)[0]
             if target and not (entry.parent / target).exists():
-                errors.append("missing linked resource: " + target)
+                errors.append("[LINK001] missing linked resource; supply the file or correct the relative path: " + target)
         results.append({"name": name, "path": str(entry.parent.relative_to(root)), "errors": errors})
     if set(classified) != {item["name"] for item in results}:
-        raise ValueError("taxonomy does not cover exactly the installed canonical skills")
+        raise ValueError("[CAT001] taxonomy does not cover exactly the installed canonical skills; update taxonomy.json")
     return results
 
 
